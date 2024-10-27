@@ -2,6 +2,9 @@ package com.shavi.movie.controllers;
 
 import com.shavi.movie.request.MovieRequest;
 import com.shavi.movie.services.MovieService;
+//import io.swagger.v3.oas.annotations.Operation;
+//import io.swagger.v3.oas.annotations.responses.ApiResponse;
+//import io.swagger.v3.oas.annotations.responses.ApiResponses;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -17,15 +20,12 @@ public class MovieController {
     @Autowired
     private MovieService movieService;
 
-//    // Add new movie - POST
+    // Add new movie - POST
 //    @Operation(summary = "Add a new movie", description = "Creates a new movie entry")
 //    @ApiResponses(value = {
 //            @ApiResponse(responseCode = "201", description = "Movie added successfully"),
 //            @ApiResponse(responseCode = "400", description = "Invalid request")
 //    })
-//
-
-    //Add new movie - POST
     @PostMapping("/addNew")
     public ResponseEntity<String> addNewMovie(@RequestBody MovieRequest movieRequest) {
         try{
